@@ -8,7 +8,7 @@ import { SITE } from '../../consts';
 import { t } from '../../i18n';
 ---
 
-<BaseLayout
+<BaseLayout 
   title={t('about.title')}
   description={`About the author behind this ${SITE.title} site.`}
 >
@@ -24,17 +24,15 @@ import { t } from '../../i18n';
   <section class="section prose-grid">
     <div>
       <p class="eyebrow">Profile</p>
-      <h2>Quiet systems, clear writing, durable interfaces.</h2>
+      <h2>Designing clarity into complex systems.</h2>
     </div>
     <div class="prose-stack">
       <p>
-        I work across product strategy, interface systems, and technical writing. The common thread
-        is structure: making complex material easier to scan, trust, and maintain.
+        I work across solution design and systems integration, solving practical problems and turning complexity 
+        into systems that are easier to understand and maintain.
       </p>
       <p>
-        Astro Keel leaves room for this kind of context without forcing a loud personal brand.
-        Replace this placeholder with a specific background, current role, and the constraints that
-        shape your work.
+        I use this space to document what I learn, explore technical ideas, and share the thinking behind the work.
       </p>
     </div>
   </section>
@@ -44,37 +42,28 @@ import { t } from '../../i18n';
       <article>
         <span>01</span>
         <h3>Current focus</h3>
-        <p>Designing lean content systems, portfolio surfaces, and editorial product pages.</p>
+        <p>Expanding on pre-sales experience - product Proof-of-Concepts, technical workshops, and solution design.</p>
       </article>
       <article>
         <span>02</span>
         <h3>Background</h3>
         <p>
-          Experience spanning frontend implementation, design systems, and writing for technical
-          audiences.
+          5 years of tech-consulting experience selling and building scalable data platforms and intuitive front-end dashboard interfaces. 
+          Building a technical stack portfolio across Microsoft, AWS, and Databricks.
         </p>
       </article>
       <article>
         <span>03</span>
         <h3>Contact</h3>
         <p>
-          Use this section for availability, collaboration preferences, or a direct contact route.
+          <a href="mailto:weike.phuah@gmail.com" style="display:inline-flex;align-items:center;gap:0.4em;text-decoration:none;color:inherit;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6l9 -6"/>
+            </svg>
+            weike.phuah@gmail.com
+          </a>
         </p>
       </article>
-    </div>
-  </section>
-
-  <section class="section prose-grid about-closing">
-    <div>
-      <p class="eyebrow">Method</p>
-      <h2>Structure before surface.</h2>
-    </div>
-    <div class="prose-stack">
-      <p>
-        The theme treats the page like a working document: hierarchy first, rhythm second, visual
-        signature third. Fine rules, generous spacing, and type contrast carry the identity without
-        competing with the content.
-      </p>
     </div>
   </section>
 </BaseLayout>

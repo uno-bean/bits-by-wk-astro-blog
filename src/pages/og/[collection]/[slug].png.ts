@@ -18,7 +18,7 @@ interface OgProps {
 
 export const getStaticPaths = (async () => {
   const blog = await getCollection('blog', ({ data }) => !data.draft);
-  const works = await getCollection('works');
+  const works = await getCollection('tutorials');
   return [
     ...blog.map((entry) => ({
       params: { collection: 'blog', slug: entry.id },
@@ -29,7 +29,7 @@ export const getStaticPaths = (async () => {
       } satisfies OgProps,
     })),
     ...works.map((entry) => ({
-      params: { collection: 'works', slug: entry.id },
+      params: { collection: 'tutorials', slug: entry.id },
       props: {
         title: entry.data.title,
         description: entry.data.description,

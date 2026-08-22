@@ -110,11 +110,12 @@ const isActive = (href: string) => {
     </main>
 
     <footer class="site-footer">
-      <p>{SITE.footerText}</p>
-      <div class="footer-links">
-        <a href={withBase('/blog/')}>{t('footer.notes')}</a>
-        <a href="https://almanac.p4ni.com" target="_blank" rel="noopener noreferrer">Almanac ↗</a>
-      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href={withBase('/')}>{t('nav.home')}</a>
+        <a href={withBase('/blog/')}>{t('nav.blog')}</a>
+        <a href={withBase('/tutorials/')}>{t('nav.works')}</a>
+        <a href={withBase('/about/')}>{t('nav.about')}</a>
+      </nav>
       <SocialLinks />
     </footer>
 

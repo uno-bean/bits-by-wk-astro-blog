@@ -20,7 +20,7 @@ export const en = {
   // Header, footer, and other chrome
   'nav.home': 'Home',
   'nav.about': 'About',
-  'nav.works': 'Works',
+  'nav.works': 'Tutorials',
   'nav.blog': 'Blog',
   'nav.search': 'Search',
   'nav.label': 'Main navigation',
@@ -37,14 +37,14 @@ export const en = {
 
   // Home — labels and links only; the page's own copy lives in index.astro
   'home.primaryLinks': 'Primary links',
-  'home.viewWorks': 'View works',
+  'home.viewWorks': 'View tutorials',
   'home.readNotes': 'Read notes',
   'home.overviewLabel': 'Theme overview',
-  'home.latestWorksEyebrow': 'Latest works',
-  'home.allWorks': 'All works',
+  'home.latestWorksEyebrow': 'Latest tutorials',
+  'home.allWorks': 'All tutorials',
   'home.workTech': '{title} technology',
   'home.worksEmpty':
-    'Add works under <code>src/content/works</code> to surface the latest projects here.',
+    'Add tutorials under <code>src/content/tutorials</code> to surface the latest projects here.',
   'home.latestBlogEyebrow': 'Latest blog',
   'home.allPosts': 'All posts',
   'home.postsEmpty':
@@ -91,10 +91,10 @@ export const en = {
   'comments.failedLink': 'GitHub Discussions ↗',
   'comments.noscript': 'Comments require JavaScript. They are hosted on GitHub Discussions.',
 
-  // Works
-  'works.title': 'Works',
-  'works.eyebrow': 'Works',
-  'works.listLabel': 'Selected works',
+  // Tutorials
+  'works.title': 'Tutorials',
+  'works.eyebrow': 'Tutorials',
+  'works.listLabel': 'Selected tutorials',
   'work.eyebrow': 'Work',
   'work.visit': 'Visit project',
   'work.repository': 'View repository',
@@ -122,7 +122,7 @@ export const en = {
   'notFound.linksLabel': 'Recovery links',
   'notFound.home': 'Back home',
   'notFound.blog': 'Read the blog',
-  'notFound.works': 'Browse works',
+  'notFound.works': 'Browse tutorials',
 };
 
 /** The shape every dictionary must implement. */

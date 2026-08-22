@@ -1,0 +1,111 @@
+---
+title: 'Another AI control plane went Generally Available last week. What's the deal with them?'
+publishDate: 2026-08-14
+tags:
+  - article
+  - AI
+description: 'Describing the role of an AI control plane in enterprise AI.'
+heroImage: ./blog-hero.jpg
+draft: false
+---
+
+On 6 August 2026, Unity AI Gateway became generally available on Databricks. The idea of an AI
+control pane is not a novel one, and this is part of a broader emerging trend in how
+enterprises are expected to work with AI in the future. AWS's AgentCore became generally available
+on October 2025, while Azure's dedicated AI Gateway tier entered general availability on July 2026.
+Increasingly, enterprises are beginning to realise that what drives value in the AI space is not always
+about finding the most powerful or revolutionary product. Rather, setting the right control framework
+and infrastructure in place is what keep things ticking in the long term.
+
+So, what exactly are the problems that enterprise AI teams face which makes a control pane that much more enticing?
+The clue lies in the core offerings behind Databricks's Unity AI Gateway.
+
+## 1. Visibility over what's running and who can use it
+It is important to understand that AI Gateway is not an independent layer within the Databricks ecosystem. 
+Databricks describes the Gateway as a single, centralized governance layer for an AI estate, built on Unity Catalog.
+
+At first glance, having a centralized catalog can look like little more than an organizational convenience. 
+Its real value, however, is governance. By establishing a governed inventory of the AI services, agents, 
+and tools available to the organization, AI teams gain visibility into what capabilities are being exposed. 
+They can then centrally control who can access them and how they are used.
+
+That visibility matters as without it, an employee could inadvertently use tools that pose a risk to the organization.
+Take for example an unapproved malicious agent that could connect to sensitive enterprise data. All it takes is for 
+an unknowing employee to approve it - and without even realizing, sensitive data is sent to external services resulting
+in a serious compliance risk event. Even if the agent was introduced with good intentions, we can see how it can be dangerous
+to leave the governing decisions to independent employees. Rather, it makes monumentally more sense to leave the decision making 
+to teams whose expertise lies specifically in this area. The AI Gateway supports this by giving organizations a location to 
+understand what tools exists, who is using it, what it can access, and what controls are applied on it. 
+
+Because AI Gateway is built on Unity  Catalog, organizations can extend an existing governance model to AI rather 
+than creating and maintaining a parallel governance framework. This can be a real difference-maker for organizations 
+that have been actively increasing AI fluency, allowing solutions to move from experimentation into transparent, governed production.
+
+An effective control pane is hence one that first and foremost, provides transparency in a manner that does not require a governance silo. 
+
+## 2. Keeping AI spend from spiralling
+When third-party AI services began to gain traction, organizations were excited by the prospect of significant cost savings brought 
+about by increased productivity. Fast forward to today—that potential very much exists, but organizations are beginning to understand 
+that realizing those savings is less straightforward than initially expected.
+
+To understand where AI spend can come from, we must first understand the charging models. AI services can be paid for using a 
+pay-as-you-go model, where charges are based on actual consumption. They can also be offered through subscription models, where 
+organizations pay a fixed fee for a defined level of access or usage. In many cases, pricing combines elements of both. Left unchecked, 
+organizations run the risk of either generating unexpectedly high usage costs or consuming their allocated capacity far faster than intended.
+
+These are two very real economic problems that AI Gateway aims to address. The first is budget control, which governs how much can be spent. 
+The second is rate limiting, which governs how quickly capacity can be consumed. Used together, they provide much tighter control over how AI 
+services are consumed.
+
+AI Gateway takes this control a step further by allowing limits to be applied not only to individual users, but also to service principals 
+and user groups. This shifts the conversation from “How much should this user be allowed to consume?” to “How much AI consumption is appropriate 
+for this team or workload?”. Additionally, alerts can be configured to provide visibility as thresholds are approached, while enforcement mechanisms 
+can be arranged to stop consumption from continuing beyond customized limits. This makes sense, as controllers should not have to manually monitor 
+AI consumption and intervene whenever usage approaches a limit.
+
+Ultimately, an effective AI control plane should be able to define, track, and enforce AI consumption in a way that reflects how organizations 
+are actually structured.
+
+## 3. Controlling what AI is actually allowed to do and respond
+The past segments have largely addressed issues about how we administer AI, but regulating what AI produces and what it is allowed to do is of critical 
+importance as well. This becomes increasingly important as more powerful agents are given permission to act on behalf of users. Such use cases already 
+exist, with common examples including agents that can execute code or send emails autonomously.
+
+Now, imagine that an agent executes code that corrupts a repository, or sends an email containing potentially discriminatory content or 
+Personally Identifiable Information (PII). The agent may have been authorized to perform the action, but that does not necessarily mean the action itself 
+was appropriate.Needless to say, guardrails must remain in place even as organizations continue to pursue the productivity gains offered by autonomous agent.
+
+AI Gateway provides a centralized location for applying these controls. Databricks provides built-in guardrails for common risks such as unsafe content, 
+PII, and prompt injection, while also allowing organizations to create custom service policies for requirements specific to their environment. The key 
+learning point here is that generic guardrails are important as a means of safeguarding against common pitfalls, but a true control plane should not force 
+organizations into a fixed set of controls. It should also allow these guardrails to be adapted to the organization’s specific operational, technical, and 
+security needs when the built-in options are deemed insufficient.
+
+
+## So does your organisation actually need one?
+Well, not really. It is important to treat the control plane just like any product, and evaluate it carefully. 
+Listed below are a (non-comprehensive) set of considerations:
+
+1.  Integration with the existing technology stack: A control plane is most valuable when it fits naturally into the organization's existing governance systems, 
+    as well as its downstream applications. First, this helps prevent governance silos and allows security and access policies to be maintained consistently. 
+    Second, it ensures that applications do not require substantial redesign simply because their AI services are incompatible with the control plane.
+
+2.  Cost relative to the scale of the AI estate: A control plane becomes increasingly useful as both AI consumption and the underlying ecosystem expand. 
+    Increased consumption can mean usage spanning multiple teams, business units, and applications. A more complex ecosystem may also bring together models, agents, 
+    and MCP servers from various providers. Having a common governance layer can help reduce this fragmentation, particularly compared with an environment where 
+    everything is owned and managed by a small team. For a small AI estate, the additional cost of a dedicated control plane may be difficult to justify.
+
+3.  Risk profile of the AI workloads: A control plane ultimately aims to reduce organizational risk. The greater the potential risk associated with AI workloads, 
+    the stronger the case for implementing a control plane to provide tighter controls and guardrails. On the other hand, it may be overkill if the organization's 
+    primary AI use case is, for example, internal summarization.
+
+4.  Operational overhead: Purchasing a control plane alone does not guarantee effective governance. It is a tool after all, and someone must have the right skill 
+    set to operate it - from defining policies to managing budgets and monitoring alerts. If the organization does not have the right personnel to operate the control 
+    plane properly, it risks becoming a white elephant.
+
+Even if an organization is unable to justify a control plane at its current stage of AI adoption, it should still form part of the longer-term roadmap if the intention 
+is to scale AI usage over time.
+
+The increasing acceptance of a control plane as a core component of an organization's AI infrastructure shows that organizations are becoming more deliberate about how they use and govern AI. 
+However, despite being a relatively new concept, new capabilities are already being introduced at a rapid pace. Organizations that understand this early and prioritizes adoption will likely
+find themselves in a much stronger position as  their AI adoption continues to grow.

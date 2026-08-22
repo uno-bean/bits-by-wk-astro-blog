@@ -9,7 +9,7 @@ export const ja: UIStrings = {
   // Header, footer, and other chrome
   'nav.home': 'ホーム',
   'nav.about': 'プロフィール',
-  'nav.works': '制作物',
+  'nav.works': 'チュートリアル',
   'nav.blog': 'ブログ',
   'nav.search': '検索',
   'nav.label': 'メインナビゲーション',
@@ -26,14 +26,14 @@ export const ja: UIStrings = {
 
   // Home
   'home.primaryLinks': '主要リンク',
-  'home.viewWorks': '制作物を見る',
+  'home.viewWorks': 'チュートリアルを見る',
   'home.readNotes': 'ノートを読む',
   'home.overviewLabel': 'テーマの概要',
-  'home.latestWorksEyebrow': '最新の制作物',
-  'home.allWorks': 'すべての制作物',
+  'home.latestWorksEyebrow': '最新のチュートリアル',
+  'home.allWorks': 'すべてのチュートリアル',
   'home.workTech': '{title} の使用技術',
   'home.worksEmpty':
-    '<code>src/content/works</code> に制作物を追加すると、ここに最新のプロジェクトが並びます。',
+    '<code>src/content/tutorials</code> にチュートリアルを追加すると、ここに最新のプロジェクトが並びます。',
   'home.latestBlogEyebrow': '最新のブログ',
   'home.allPosts': 'すべての記事',
   'home.postsEmpty':
@@ -78,9 +78,9 @@ export const ja: UIStrings = {
     'コメントの表示には JavaScript が必要です。スレッドは GitHub Discussions にあります。',
 
   // Works
-  'works.title': '制作物',
-  'works.eyebrow': '制作物',
-  'works.listLabel': '厳選した制作物',
+  'works.title': 'チュートリアル',
+  'works.eyebrow': 'チュートリアル',
+  'works.listLabel': 'チュートリアル一覧',
   'work.eyebrow': '制作物',
   'work.visit': 'プロジェクトを見る',
   'work.repository': 'リポジトリを見る',
@@ -108,5 +108,5 @@ export const ja: UIStrings = {
   'notFound.linksLabel': '復帰用リンク',
   'notFound.home': 'ホームへ戻る',
   'notFound.blog': 'ブログを読む',
-  'notFound.works': '制作物を見る',
+  'notFound.works': 'チュートリアルを見る',
 };

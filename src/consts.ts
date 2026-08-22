@@ -106,7 +106,7 @@ export type NavItem =
 export const NAV_ITEMS: readonly NavItem[] = [
   { href: '/', labelKey: 'nav.home' },
   { href: '/about/', labelKey: 'nav.about' },
-  { href: '/works/', labelKey: 'nav.works' },
+  { href: '/tutorials/', labelKey: 'nav.works' },
   { href: '/blog/', labelKey: 'nav.blog' },
   { href: '/search/', labelKey: 'nav.search' },
 ];
