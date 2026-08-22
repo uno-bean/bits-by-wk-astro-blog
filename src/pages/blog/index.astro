@@ -10,10 +10,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 );
 ---
 
-<BaseLayout
-  title={t('blog.title')}
-  description={`Notes and writing — ${SITE.title}.`}
->
+<BaseLayout title={t('blog.title')} description={`Notes and writing — ${SITE.title}.`}>
   <section class="page-head section">
     <p class="eyebrow">{t('blog.eyebrow')}</p>
     <h1>Notes, essays, and release logs.</h1>
@@ -28,9 +25,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
               <time datetime={post.data.publishDate.toISOString()}>
                 {formatDate(post.data.publishDate)}
               </time>
-              {post.data.tags.length > 0 && (
-                <span> · {post.data.tags.join(', ')}</span>
-              )}
+              {post.data.tags.length > 0 && <span> · {post.data.tags.join(', ')}</span>}
             </p>
             <h2>
               <a href={withBase(`/blog/${post.id}/`)}>{post.data.title}</a>
