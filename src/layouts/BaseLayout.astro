@@ -74,9 +74,15 @@ const isActive = (href: string) => {
     <slot name="head" />
     <ClientRouter />
     <style is:global>
-      .logo-dark { display: none; }
-      [data-theme="dark"] .logo-light { display: none !important; }
-      [data-theme="dark"] .logo-dark { display: block !important; }
+      .logo-dark {
+        display: none;
+      }
+      [data-theme='dark'] .logo-light {
+        display: none !important;
+      }
+      [data-theme='dark'] .logo-dark {
+        display: block !important;
+      }
     </style>
     <script is:inline>
       // Runs before paint on the initial load, and again on `astro:after-swap`
@@ -96,8 +102,20 @@ const isActive = (href: string) => {
   <body>
     <header class="site-header">
       <a class="brand" href={withBase('/')} aria-label={t('nav.brandHome', { site: siteName })}>
-        <Image src={monogram} alt="Bits by WK" height={28} style="display: block;" class="logo-light" />
-        <Image src={monogramDark} alt="Bits by WK" height={25} style="display: none;" class="logo-dark" />
+        <Image
+          src={monogram}
+          alt="Bits by WK"
+          height={28}
+          style="display: block;"
+          class="logo-light"
+        />
+        <Image
+          src={monogramDark}
+          alt="Bits by WK"
+          height={25}
+          style="display: none;"
+          class="logo-dark"
+        />
       </a>
       <nav class="site-nav" aria-label={t('nav.label')}>
         {
