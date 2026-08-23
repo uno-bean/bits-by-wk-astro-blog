@@ -7,6 +7,8 @@ import '@fontsource/public-sans/700.css';
 import '@fontsource-variable/jetbrains-mono/wght.css';
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
+import { Image } from 'astro:assets';
+import monogram from '../assets/Bits by WK blog image.png';
 import { withBase } from '../lib/url';
 import { SITE, NAV_ITEMS } from '../consts';
 import { locale, navLabel, t } from '../i18n';
@@ -88,8 +90,7 @@ const isActive = (href: string) => {
   <body>
     <header class="site-header">
       <a class="brand" href={withBase('/')} aria-label={t('nav.brandHome', { site: siteName })}>
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>{siteName}</span>
+        <Image src={monogram} alt="Bits by WK" height={28} style="display: block;" />
       </a>
       <nav class="site-nav" aria-label={t('nav.label')}>
         {
