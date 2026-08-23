@@ -23,8 +23,8 @@ const works = (await getCollection('tutorials')).sort((a, b) => {
     <h1>Notes and work from the field.</h1>
     <p class="lead">A space for writing about data, AI, and the systems that connect them.</p>
     <nav aria-label={t('home.primaryLinks')} class="action-row">
-      <a class="button" href={withBase('/tutorials/')}>{t('home.viewWorks')}</a>
-      <a class="text-link" href={withBase('/blog/')}>{t('home.readNotes')}</a>
+      <a class="button" href={withBase('/blog/')}>{t('home.readNotes')}</a>
+      <a class="text-link" href={withBase('/tutorials/')}>{t('home.viewWorks')}</a>
     </nav>
   </section>
 

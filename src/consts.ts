@@ -10,7 +10,7 @@ export const SITE = {
    *  language's strings while keeping their own date format. */
   locale: 'en',
   /** Site name — used in the header brand, <title>, and og:site_name. */
-  title: 'Astro Keel',
+  title: 'Bits by WK',
   /** Default meta description for pages that don't set their own. */
   description: 'A minimal, neutral, and modern portfolio and blog theme for Astro.',
   /** Description of the RSS feed at /rss.xml. */

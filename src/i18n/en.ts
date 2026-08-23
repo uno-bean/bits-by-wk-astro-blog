@@ -38,7 +38,7 @@ export const en = {
   // Home — labels and links only; the page's own copy lives in index.astro
   'home.primaryLinks': 'Primary links',
   'home.viewWorks': 'View tutorials',
-  'home.readNotes': 'Read notes',
+  'home.readNotes': 'Read blog',
   'home.overviewLabel': 'Theme overview',
   'home.latestWorksEyebrow': 'Latest tutorials',
   'home.allWorks': 'All tutorials',

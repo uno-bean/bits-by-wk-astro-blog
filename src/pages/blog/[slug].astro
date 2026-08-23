@@ -45,6 +45,12 @@ const { Content } = await render(entry);
     </header>
 
     <div class="section article-layout">
+      <aside class="article-toc">
+        <p class="eyebrow">{t('blog.tagsEyebrow')}</p>
+        <ul class="tech-list">
+          {entry.data.tags.map((tag) => <li>{tag}</li>)}
+        </ul>
+      </aside>
       <div class="prose">
         <Content />
       </div>
