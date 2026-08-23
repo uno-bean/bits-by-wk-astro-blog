@@ -29,30 +29,6 @@ const works = (await getCollection('tutorials')).sort((a, b) => {
   </section>
 
   {
-    works.length > 0 && (
-      <section class="section" aria-label={t('home.overviewLabel')}>
-        <div class="section-heading">
-          <p class="eyebrow">{t('home.latestWorksEyebrow')}</p>
-          <a class="text-link" href={withBase('/tutorials/')}>
-            {t('home.allWorks')}
-          </a>
-        </div>
-        <div class="work-list">
-          {works.slice(0, 2).map((work) => (
-            <article class="work-card">
-              <p class="entry-meta">{work.data.tech.join(' / ')}</p>
-              <h2>
-                <a href={withBase(`/tutorials/${work.id}/`)}>{work.data.title}</a>
-              </h2>
-              <p>{work.data.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-    )
-  }
-
-  {
     posts.length > 0 && (
       <section class="section" aria-label={t('home.latestBlogEyebrow')}>
         <div class="section-heading">
@@ -74,6 +50,30 @@ const works = (await getCollection('tutorials')).sort((a, b) => {
                 <a href={withBase(`/blog/${post.id}/`)}>{post.data.title}</a>
               </h2>
               <p>{post.data.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    works.length > 0 && (
+      <section class="section" aria-label={t('home.overviewLabel')}>
+        <div class="section-heading">
+          <p class="eyebrow">{t('home.latestWorksEyebrow')}</p>
+          <a class="text-link" href={withBase('/tutorials/')}>
+            {t('home.allWorks')}
+          </a>
+        </div>
+        <div class="work-list">
+          {works.slice(0, 2).map((work) => (
+            <article class="work-card">
+              <p class="entry-meta">{work.data.tech.join(' / ')}</p>
+              <h2>
+                <a href={withBase(`/tutorials/${work.id}/`)}>{work.data.title}</a>
+              </h2>
+              <p>{work.data.description}</p>
             </article>
           ))}
         </div>
