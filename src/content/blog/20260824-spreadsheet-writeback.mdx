@@ -1,0 +1,40 @@
+---
+title: 'Databricks brings writeback to Google Sheets'
+publishDate: 2026-08-24
+tags:
+  - snippet
+  - databricks
+description: 'Databricks has introduced writeback from Google Sheets into Unity Catalog. It may seem like a small feature, but it could have interesting implications for how business users work with governed data.'
+heroImage: ./blog_images/20260824-spreadsheet-writeback.gif
+draft: false
+---
+
+Users can now update Unity Catalog tables directly using spreadsheets. Yes, you heard that right.
+
+Databricks just released Google Sheets writeback onto the platform, with similar Excel functionality currently
+in Public Preview. The Databricks Connector integrates directly into your spreadsheets, allowing users to
+browse and import Unity Catalog tables for analysis. With the new release, Edits can now be written back into
+Unity Catalog, closing the loop between spreadsheet analysis and the governed data platform. Amid the recent
+hype around other platform releases, this might be one feature that ends up being slept on. Don't be so quick
+to underestimate this capability, though, as it resolves a common conundrum that many users face.
+
+The Databricks Connector is a tool primarily aimed at business users who live in spreadsheet-centric
+workflows - think financial analysts, for example. It allows them to work with governed data without needing
+to know their way around the Databricks platform or languages such as SQL. Should these users want to
+incorporate changes such as comments, budget updates, or mapping changes, a common workflow is to download the
+extract and pass the edited file back to data engineers for reingestion. This manual handover results in longer
+lifecycle times, consumes data engineering capacity, and ultimately slows down decision-making — inefficiencies
+that aren't ideal for anyone involved. This is why writeback is so useful: it allows business users to apply
+their domain expertise directly to governed data with minimal handover and lag time.
+
+There is a catch, though - this is not direct editing against a Delta table. The new release currently supports
+only two ways of writing data back: users can either (1) overwrite an existing Unity Catalog table entirely,
+or (2) select a spreadsheet range and create a new Unity Catalog table from it. If you are hoping to make direct
+cell or row-level edits like you would in an online spreadsheet, that is simply not possible (at least not yet).
+There is also the governance question of how organizations manage these write permissions, particularly when
+business users are given the ability to overwrite existing tables.
+
+Still, I believe this is an interesting step towards bringing the Databricks platform closer to the business
+itself. The real value may not be in making spreadsheets more powerful, but in removing the handoff between
+business users and data teams. Sometimes, the right approach is to go back to basics — in this case, the traditional
+spreadsheet.
